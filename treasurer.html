@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote for Treasurer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="voting.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="president.html">Vote for President</a></li>
+            <li><a href="results.html">Voting Results</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Vote for Treasurer</h1>
+        <form action="#" method="post" class="voting-form" onsubmit="castVote('Treasurer', this.treasurer.value, '/thankyuo.html'); return false;">
+            <label for="treasurer">Select your candidate for Treasurer:</label><br>
+            <input type="radio" id="candidate1" name="treasurer" value="1" checked>
+            <label for="candidate1">Candidate 1</label><br>
+            <input type="radio" id="candidate2" name="treasurer" value="2">
+            <label for="candidate2">Candidate 2</label><br>
+            <input type="submit" value="Submit Vote" class="submit-btn">
+        </form>
+    </div>
+    <script>
+        // Retrieve the voted value from local storage
+        const votedCandidate = localStorage.getItem('Treasurer');
+        // If a candidate was voted for Treasurer, pre-select the corresponding option
+        if (votedCandidate) {
+            document.querySelector(`input[name="treasurer"][value="${votedCandidate}"]`).checked = true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="president.html">Vote for President</a></li>
+            <li><a href="results.html">Voting Results</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Voting Results</h1>
+        <div id="results">
+            <!-- Results will be dynamically populated here -->
+        </div>
+        <!-- Reset button -->
+        <button class="reset-btn" onclick="resetVoteCounts()">Reset Vote Counts</button>
+    </div>
+
+    <script>
+        // Retrieve and display the vote counts from local storage
+        const resultsDiv = document.getElementById('results');
+        const positions = ['President', 'Secretary', 'Treasurer'];
+
+        positions.forEach(position => {
+            const votes = localStorage.getItem(position);
+            const resultText = votes ? `${position}: ${votes} votes` : `${position}: 0 votes`;
+            const resultElement = document.createElement('p');
+            resultElement.textContent = resultText;
+            resultsDiv.appendChild(resultElement);
+        });
+
+        // Function to reset the vote counts in local storage
+        function resetVoteCounts() {
+            positions.forEach(position => {
+                localStorage.removeItem(position);
+            });
+            // Reload the page to reflect the changes
+            location.reload();
+        }
+    </script>
+</body>
+</html>

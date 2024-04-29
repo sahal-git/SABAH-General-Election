@@ -1,0 +1,135 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-link {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.section-link:hover {
+    background-color: #0056b3;
+}
+
+.voting-form {
+    margin-top: 20px;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.vote-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.vote-btn:hover {
+    background-color: #0056b3;
+}
+
+/* styles.css */
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #333;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+}
+
+.reset-btn {
+    background-color: #dc3545; /* Red color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    margin-top: 20px; /* Margin from the top */
+}
+
+.reset-btn:hover {
+    background-color: #c82333; /* Darker red color on hover */
+}
